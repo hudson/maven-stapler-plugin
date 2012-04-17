@@ -63,9 +63,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.kohsuke.stapler</groupId>
+            <groupId>org.hudsonci.stapler</groupId>
             <artifactId>stapler</artifactId>
-            <version>1.100</version>
+            <version>3.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
