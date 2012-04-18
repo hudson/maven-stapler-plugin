@@ -64,7 +64,7 @@
     <dependencies>
         <dependency>
             <groupId>org.hudsonci.stapler</groupId>
-            <artifactId>stapler</artifactId>
+            <artifactId>stapler-core</artifactId>
             <version>3.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
