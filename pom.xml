@@ -22,6 +22,20 @@
         <developerConnection>scm:git:git@github.com:hudson/maven-stapler-plugin</developerConnection>
         <url>https://github.com/hudson/maven-stapler-plugin</url>
     </scm>
+    
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-releases</id>
+            <name>Sonatype Nexus Releases</name>
+            <url>https://oss.sonatype.org/content/repositories/releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>  
+    </repositories>
 
     <build>
         <plugins>
@@ -29,8 +43,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
                 <version>2.3.2</version>
             </plugin>
@@ -65,7 +79,7 @@
         <dependency>
             <groupId>org.hudsonci.stapler</groupId>
             <artifactId>stapler-core</artifactId>
-            <version>3.0.1-SNAPSHOT</version>
+            <version>3.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>

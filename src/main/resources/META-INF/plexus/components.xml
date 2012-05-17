@@ -1,6 +1,6 @@
 <component-set>
   <components>
-
+    <!-- TODO: These components could be removed and use regular war since no custom compiler mojo is used after switching to APT6 -->
     <!-- custom life cycle for stapler-jar -->
     <component>
       <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
@@ -12,8 +12,7 @@
             <id>default</id>
             <phases>
               <process-resources>org.apache.maven.plugins:maven-resources-plugin:resources</process-resources>
-              <!-- use a custom compiler for all stapler annotations processing -->
-              <compile>org.kohsuke.stapler:maven-stapler-plugin:apt-compile</compile>
+              <compile>org.apache.maven.plugins:maven-compiler-plugin:compile</compile>
               <process-test-resources>org.apache.maven.plugins:maven-resources-plugin:testResources</process-test-resources>
               <test-compile>org.kohsuke.stapler:maven-stapler-plugin:apt-test-compile</test-compile>
               <test>org.apache.maven.plugins:maven-surefire-plugin:test</test>
@@ -37,8 +36,7 @@
             <!-- START SNIPPET: war-lifecycle -->
             <phases>
               <process-resources>org.apache.maven.plugins:maven-resources-plugin:resources</process-resources>
-              <!-- use a custom compiler for all stapler annotations processing -->
-              <compile>org.kohsuke.stapler:maven-stapler-plugin:apt-compile</compile>
+              <compile>org.apache.maven.plugins:maven-compiler-plugin:compile</compile>
               <process-test-resources>org.apache.maven.plugins:maven-resources-plugin:testResources</process-test-resources>
               <test-compile>org.kohsuke.stapler:maven-stapler-plugin:apt-test-compile</test-compile>
               <test>org.apache.maven.plugins:maven-surefire-plugin:test</test>
@@ -75,13 +73,6 @@
         <language>java</language>
         <addedToClasspath>false</addedToClasspath>
       </configuration>
-    </component>
-
-    <component>
-      <role>org.codehaus.plexus.compiler.Compiler</role>
-      <role-hint>stapler-apt</role-hint>
-      <implementation>org.kohsuke.stapler.AptCompiler</implementation>
-      <description />
     </component>
   </components>
 </component-set>
