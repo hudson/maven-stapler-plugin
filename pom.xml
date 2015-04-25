@@ -77,9 +77,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.hudsonci.stapler</groupId>
+            <groupId>org.eclipse.hudson.stapler</groupId>
             <artifactId>stapler-core</artifactId>
-            <version>3.0.1</version>
+            <version>3.0.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
